@@ -7,7 +7,7 @@
     "dev": "nodemon index.ts",
     "build": "tsc",
     "heroku-prebuild": "npm install",
-    "heroku-postbuild": "ng build --prod"
+    "heroku-postbuild": "npm run build --prod"
   },
   "keywords": [],
   "author": "",
