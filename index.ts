@@ -11,4 +11,4 @@ const server = new Server(app)
 server.start()
 app.get('/api', (req, res) => res.send('WOWO!'))
 
-console.log('Hellooo1', process.env)
+console.log('Hellooo1')

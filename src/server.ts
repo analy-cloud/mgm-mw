@@ -1,9 +1,11 @@
-const { HTTP_PORT: PORT } = process.env
+const { LOCAL_PORT } = process.env
 
 export class Server {
     app: any
+    PORT: number | string | undefined
     constructor(app: any) {
         this.app = app
+        this.PORT = process.env.PORT || LOCAL_PORT
     }
 
     start() {
@@ -12,8 +14,8 @@ export class Server {
 
     _serverListen(app: any) {
         app.listen(
-            PORT,
-            console.log(`Server started at ${PORT}`)
+            this.PORT,
+            console.log(`Server started at ${this.PORT}`)
         )
     }
 }
