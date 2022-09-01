@@ -5,7 +5,9 @@
   "scripts": {
     "start": "node dist/index.js",
     "dev": "nodemon index.ts",
-    "build": "concurrently \"npm install\" \"tsc\""
+    "build": "tsc",
+    "heroku-prebuild": "npm install",
+    "heroku-postbuild": "ng build --prod"
   },
   "keywords": [],
   "author": "",
